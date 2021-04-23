@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... params){
             try{
-                Document doc = (Document) Jsoup.connect(htmlPageUrl).get(); // 파싱하고 싶은 페이지 링크 정보 get
+                Document doc = (Document) Jsoup.connect(htmlPageUrl).get(); // 파싱하고 싶은 페이지 링크 정보 get.
                 Elements links = doc.select("a[href]"); // select() : 원하는 태그의 부분만 뽑아냄
 
                 for(Element link:links){ // "abs:href"와 일치하는 부분을 추출하여 특정태그의 내용을 뽑아냄
